@@ -4,7 +4,9 @@
     align-items: center;
     justify-content: center;
     gap: 80px;
-    margin: 80px 170px;
+    margin: 80px 100px;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 .services-title{
     position: relative;
@@ -21,11 +23,12 @@
     z-index: -1;
 }
 .services-format{
+    padding: 20px 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
-    padding: 60px;
+    gap: 10px;
+    padding: 30px;
     border-radius: 10px;
     border: 2px solid white;
     transition: 0.4s;
@@ -35,14 +38,14 @@
     display:grid;
     grid-template-columns:  1fr 1fr 1fr;
     gap: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 .services-format h3{
-     font-size: 28px;
+     font-size: 20px;
     font-weight: 600;
 }
 .services-format h2{
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 800;
     background: linear-gradient(270deg, #DF8908 50%,#B415FF 100%);
     background-clip: text;
@@ -51,7 +54,7 @@
 }
 .services-format p{
     color : #d4d4d4;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 40px;
     max-width: 300px;
 }
