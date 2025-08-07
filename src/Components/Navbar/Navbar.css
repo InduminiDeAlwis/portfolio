@@ -34,3 +34,19 @@
 
     
 }
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.nav-menu li img {
+    display: block;         
+    margin: auto;           
+    width: 60px;            
+    height: auto;           
+}
+.anchor-link{
+    text-decoration: none;
+    color: white;
+}
