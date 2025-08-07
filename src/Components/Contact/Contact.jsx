@@ -24,9 +24,9 @@ const Contact = () => {
                 <img src={mail_icon} alt="" /><a href="induminialwis27@gmail.com"><p>induminialwis27@gmail.com</p></a>
               </div>
               <div className="contact-detail">
-                <img src={call_icon} alt="" />
+                <img src={call_icon} alt="" /><p>+94 77 069 1099</p>
               </div>
-              <div className="contact-detail"><p>+94 77 069 1099</p>
+              <div className="contact-detail">
                 <img src={location_icon} alt="" /><p> Galle, Sri Lanka</p>
               </div>
             </div>
