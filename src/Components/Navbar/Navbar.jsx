@@ -1,4 +1,4 @@
-import React,{ useState } from 'react'
+import React, { useState, useRef } from 'react'
 import './Navbar.css'
 import logo from '../../assets/logo.png' //change logo.svg
 import underline from '../../assets/nav_underline.svg'
