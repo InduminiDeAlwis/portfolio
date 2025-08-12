@@ -1,0 +1,118 @@
+/* AnimatedBackground.css */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(223, 137, 8, 0.5);
+}
+
+.dot-1 {
+    background: #DF8908;
+    animation: float1 12s infinite linear;
+}
+
+.dot-2 {
+    background: #B415FF;
+    animation: float2 15s infinite linear;
+}
+
+.dot-3 {
+    background: #DF8908;
+    animation: float3 10s infinite linear;
+}
+
+.dot-4 {
+    background: #B415FF;
+    animation: float4 18s infinite linear;
+}
+
+.dot-5 {
+    background: #DF8908;
+    animation: float5 14s infinite linear;
+}
+
+.dot-6 {
+    background: #B415FF;
+    animation: float6 11s infinite linear;
+}
+
+.dot-7 {
+    background: #DF8908;
+    animation: float7 16s infinite linear;
+}
+
+.dot-8 {
+    background: #B415FF;
+    animation: float8 13s infinite linear;
+}
+
+#connecting-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Floating Animations */
+@keyframes float1 {
+    0% { transform: translate(0px, 100vh) rotate(0deg); }
+    100% { transform: translate(200px, -100px) rotate(360deg); }
+}
+
+@keyframes float2 {
+    0% { transform: translate(100vw, 0px) rotate(0deg); }
+    100% { transform: translate(-100px, 100vh) rotate(-360deg); }
+}
+
+@keyframes float3 {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    100% { transform: translate(100vw, 100vh) rotate(360deg); }
+}
+
+@keyframes float4 {
+    0% { transform: translate(100vw, 100vh) rotate(0deg); }
+    100% { transform: translate(0px, 0px) rotate(-360deg); }
+}
+
+@keyframes float5 {
+    0% { transform: translate(50vw, 100vh) rotate(0deg); }
+    100% { transform: translate(80vw, -100px) rotate(360deg); }
+}
+
+@keyframes float6 {
+    0% { transform: translate(100vw, 50vh) rotate(0deg); }
+    100% { transform: translate(-100px, 20vh) rotate(-360deg); }
+}
+
+@keyframes float7 {
+    0% { transform: translate(20vw, 100vh) rotate(0deg); }
+    100% { transform: translate(90vw, -50px) rotate(360deg); }
+}
+
+@keyframes float8 {
+    0% { transform: translate(100vw, 80vh) rotate(0deg); }
+    100% { transform: translate(-50px, 10vh) rotate(-360deg); }
+}
+
+@media (max-width: 768px) {
+    .dot {
+        width: 6px;
+        height: 6px;
+    }
+}
