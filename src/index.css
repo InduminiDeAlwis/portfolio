@@ -13,6 +13,17 @@ body{
   animation: fadeIn 1.5s forwards;
 }
 
+body[data-theme='dark'] {
+  background: #161513;
+  color: white;
+}
+
+body[data-theme='light'] {
+  background: #f0f0f0;
+  color: #161513;
+}
+
+
 @keyframes fadeIn {
   to {
     opacity: 1;

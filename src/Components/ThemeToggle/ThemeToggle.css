@@ -1,0 +1,23 @@
+.theme-toggle-btn {
+  position: fixed; /* Makes it float */
+  bottom: 20px;    /* Distance from bottom */
+  right: 20px;     /* Distance from right */
+  background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  z-index: 1000;   /* Stay on top of everything */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+}
