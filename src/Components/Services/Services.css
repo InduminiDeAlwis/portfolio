@@ -23,7 +23,6 @@
     z-index: -1;
 }
 .services-format{
-    padding: 20px 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,6 +69,75 @@
     transform: scale(1.05);
     transition: 0.4s;
 }
+
+/* ===== MODAL STYLES ===== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 12px;
+    width: 450px;
+    max-width: 90%;
+    text-align: center;
+    border: 2px solid #ff00ff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    animation: popUp 0.3s ease;
+    position: relative;
+}
+
+.modal-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    background: linear-gradient(270deg, #DF8908 50%,#B415FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal-content p {
+    font-size: 18px;
+    color: #e0e0e0;
+    line-height: 28px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff00ff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes popUp {
+    from {transform: scale(0.8);}
+    to {transform: scale(1);}
+}
+
 @media(max-width:768px){
     .services{
         align-items: start;
