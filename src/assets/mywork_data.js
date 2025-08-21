@@ -8,10 +8,10 @@ import project4_img from '../assets/project_4.png'
 const mywork_data = [
     {
         w_no: 1,
-        w_name: "Portfolio Website",
+        w_name: "Travel Website",
         w_img: project1_img,
         description: "A personal portfolio showcasing my projects and skills.",
-        technologies: ["React", "CSS", "JavaScript"],
+        technologies: ["React", "CSS", "JavaScript","Ballerina"],
         category: "Web Development",
         github: "https://github.com/username/portfolio",
         live: "https://yourportfolio.com",
@@ -20,15 +20,15 @@ const mywork_data = [
     },
     {
         w_no: 2,
-        w_name: "E-commerce App",
+        w_name: "ATG Health-Care App",
         w_img: project2_img,
-        description: "An online store with cart and payment integration.",
-        technologies: ["React", "Node.js", "MongoDB"],
+        description: "Second Year hardware Project.",
+        technologies: ["React Js", "Node.js", "MongoDB","AWS Severless Architecture"],
         category: "Full Stack",
-        github: "https://github.com/username/ecommerce",
-        live: "https://yourecommerce.com",
+        github: "https://github.com/AymanTechGlobal/atg-healthcare-careplan-manager.git",
+        live: "https://atg-mobile.vercel.app/",
         date: "2025-02-01",
-        status: "Ongoing"
+        status: "Completed"
     },
     {
         w_no: 3,
