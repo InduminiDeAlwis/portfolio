@@ -128,7 +128,7 @@
         flex-direction: column;
         gap: 20px;
         padding: 10px;
-        margin-left: 0; /* Remove left margin on mobile */
+        margin-left: 200px; /* Remove left margin on mobile */
     }
     
     .hero img{
