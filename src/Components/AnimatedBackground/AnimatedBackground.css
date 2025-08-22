@@ -8,6 +8,7 @@
     z-index: -1;
     overflow: hidden;
     pointer-events: none;
+    margin: 50px 100px 30px 0px;
 }
 
 .dot {

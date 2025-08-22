@@ -192,7 +192,7 @@
 /* ===== MEDIA QUERIES ===== */
 @media(max-width:768px){
     .footer{
-        margin: 50px 30px;
+        margin: 50px 50px 100px 100px;
     }
     .footer-top{
         flex-direction: column;

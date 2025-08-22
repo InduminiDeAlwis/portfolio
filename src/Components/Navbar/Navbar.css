@@ -65,7 +65,7 @@
 
 @media(max-width:768px){     
     .navbar{         
-        margin: 20px 20px;
+        margin: 20px 70px;
         justify-content: flex-start;
         gap: 20px;         
     }      
