@@ -219,7 +219,7 @@
 }
 
 /* ---------- RESPONSIVE ---------- */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .mywork-container {
         grid-template-columns: 1fr 1fr;
         gap: 30px;
@@ -247,7 +247,7 @@
     .mywork-container {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
+        }
     .mywork-showmore {
         padding: 20px 40px;
         font-size: 18px;

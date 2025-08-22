@@ -135,6 +135,7 @@
     }
     .about-achievements{
         justify-content: space-between;
+        gap: 20px;
     }
     .about-achievement{
         gap: 10px;
