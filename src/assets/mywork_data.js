@@ -42,7 +42,7 @@ const mywork_data = [
         date: "2025-01-20",
         status: "Completed"
     },
-    {
+    /*{
         w_no: 4,
         w_name: "Chat Application",
         w_img: project4_img,
@@ -53,7 +53,7 @@ const mywork_data = [
         live: "https://yourchatapp.com",
         date: "2025-02-10",
         status: "Ongoing"
-    },
+    },*/
 ]
  
 export default mywork_data;

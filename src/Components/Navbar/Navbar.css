@@ -28,13 +28,14 @@
     transform: scale(1.05);  
 } 
 
-.navbar > img{      
-    width: 60px;     
-    height: auto;     
-    cursor: pointer;     
-    padding: 10px;     
-    margin-left: -180px; 
-} 
+.navbar > img {
+    width: 300px;   /* increase or decrease here */
+    height: auto;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10; /* avoid negative margins unless necessary */
+}
+
 
 .nav-menu li{     
     display: flex;     
