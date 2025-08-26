@@ -32,8 +32,9 @@
     width: 300px;   /* increase or decrease here */
     height: auto;
     cursor: pointer;
-    padding: 5px;
-    margin-left: 10; /* avoid negative margins unless necessary */
+    padding: 5px 5px -10px;
+    margin-left: -180px; 
+    margin-top: -150px;/* avoid negative margins unless necessary */
 }
 
 
