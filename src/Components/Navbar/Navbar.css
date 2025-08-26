@@ -1,22 +1,22 @@
-.navbar{     
+.navbar {     
     display: flex;     
     align-items: center;     
     justify-content: space-between;     
     margin: 20px 170px; 
 } 
 
-.nav-menu{     
-    display : flex;     
+.nav-menu {     
+    display: flex;     
     align-items: center;     
     list-style: none;     
     gap: 60px;     
     font-size: 23px; 
 } 
 
-.nav-connect{     
-    padding : 20px 40px;     
+.nav-connect {     
+    padding: 20px 40px;     
     border-radius: 50px;     
-    background : linear-gradient(267deg, #DA7c25 0.36%, #B923E1 102.06%);     
+    background: linear-gradient(267deg, #DA7c25 0.36%, #B923E1 102.06%);     
     font-size: 22px;     
     cursor: pointer;     
     transition: 0.5s;     
@@ -24,21 +24,21 @@
     margin-left: 70px; 
 } 
 
-.nav-connect:hover{     
+.nav-connect:hover {     
     transform: scale(1.05);  
 } 
 
+/* ✅ Logo (Desktop) */
 .navbar > img {
-    width: 300px;   /* increase or decrease here */
+    width: 300px;      /* large logo for desktop */
     height: auto;
     cursor: pointer;
-    padding: 5px 5px -10px;
-    margin-left: -180px; 
-    margin-top: -150px;/* avoid negative margins unless necessary */
+    padding: 5px;
+    margin-left: -180px;    /* removed negative margin */
+    margin-top: -170px;
 }
 
-
-.nav-menu li{     
+.nav-menu li {     
     display: flex;     
     flex-direction: column;     
     gap: 5px;     
@@ -52,45 +52,46 @@
     height: auto;            
 } 
 
-.anchor-link{     
+.anchor-link {     
     text-decoration: none;     
     color: white; 
 } 
 
-.nav-mob-open{     
+.nav-mob-open {     
     display: none; 
 } 
 
-.nav-mob-close{     
+.nav-mob-close {     
     display: none; 
 } 
 
-@media(max-width:768px){     
-    .navbar{         
-        margin: 20px 70px;
-        justify-content: flex-start;
+/* ✅ Mobile */
+@media (max-width: 768px) {     
+    .navbar {         
+        margin: 20px;       /* tighter margin */
+        justify-content: space-between;  
         gap: 20px;         
     }      
     
-    .navbar > img{
-        margin-left: 0;
-        width: 60px;
+    .navbar > img {
+        width: 300px;      /* smaller logo for mobile */
+        height: auto;
+        margin: 0;
+        margin-top: -100px;
+        margin-left: 66px
     }
     
-    .nav-connect{         
+    .nav-connect {         
         display: none;     
     }     
     
-    .nav-mob-open{         
+    .nav-mob-open {         
         display: block;         
-        position: fixed;         
-        right: 30px;         
-        top: 30px;         
+        position: relative;   /* ✅ inline with logo */
         width: 30px;          
-        z-index: 100;      
-    }     
-    
-    .nav-mob-close{         
+        z-index: 100;   
+    }
+    .nav-mob-close {         
         display: block;         
         position: absolute;         
         top: 30px;         
@@ -99,7 +100,7 @@
         z-index: 101;     
     }     
     
-    .nav-menu{         
+    .nav-menu {         
         position: fixed;         
         flex-direction: column;         
         align-items: start;         
@@ -114,7 +115,7 @@
         padding-top: 80px;     
     }     
     
-    .nav-menu li{         
+    .nav-menu li {         
         font-size: 30px;         
         padding-left: 100px;         
         flex-direction: row;         
