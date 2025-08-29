@@ -1,7 +1,7 @@
-import project1_img from './project_1.png'
-import project2_img from './project_2.png'
-import project3_img from './project_3.png'
-import project4_img from './project_4.png'
+//import project1_img from './project_1.png'
+//import project2_img from './project_2.png'
+//import project3_img from './project_3.png'
+//import project4_img from './project_4.png'
 //import project5_img from '../assets/project_5.png'
 //import project6_img from '../assets/project_6.png'
 
@@ -9,7 +9,7 @@ const mywork_data = [
     {
         w_no: 1,
         w_name: "Travel Website",
-        w_img: project1_img,
+        w_img: "/project_1.png",
         description: "A personal portfolio showcasing my projects and skills.",
         technologies: ["React", "CSS", "JavaScript","Ballerina"],
         category: "Web Development",
@@ -21,7 +21,7 @@ const mywork_data = [
     {
         w_no: 2,
         w_name: "ATG Health-Care App",
-        w_img: project2_img,
+        w_img: "/project_2.png",
         description: "Second Year hardware Project.",
         technologies: ["React Js", "Node.js", "MongoDB","AWS Severless Architecture"],
         category: "Full Stack",
@@ -33,7 +33,7 @@ const mywork_data = [
     {
         w_no: 3,
         w_name: "Blog Platform",
-        w_img: project3_img,
+        w_img: "/project_3.png",
         description: "A simple blog platform with markdown support.",
         technologies: ["Next.js", "TailwindCSS", "Firebase"],
         category: "Web App",
