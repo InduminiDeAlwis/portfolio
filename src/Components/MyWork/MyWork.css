@@ -1,264 +1,248 @@
 .mywork{
     display : flex;
     flex-direction : column;
-    align-items : center;
-    justify-content : center;
-    gap : 80px;
-    margin: 80px 170px;
-}
-.mywork-title{
-    position: relative;
-}
-.mywork-title h1{
-    padding: 0px 30px;
-    font-size: 80px;
-    font-weight: 600;
-}
-.mywork-title img{
-    position :absolute;
-    bottom: 0;
-    right:0;
-    z-index: -1;
-}
-.mywork-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-}
-.mywork-container img{
-    box-sizing: border-box;
-    width: 419px;
-    height: 280px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-.mywork-container img:hover{
-    transform: scale(1.05);
-    border:4px solid #ff00ff;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-.mywork-showmore{
-    display: flex;
-    gap:15px;
-    border-radius: 50px;
-    border: 2px solid white;
-    padding:30px 60px;
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 80px;
-    transition: 0.6s;
-    cursor: pointer;
-}
-.mywork-showmore:hover{
-    gap : 30px;
-    transition: 0.6s;
-}
-@media(max-width:768px){
+    /* MyWork styles updated to match Services visual language */
     .mywork{
-        gap: 50px;
-        margin: 50px 70px;
-        align-items: start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+      margin: 80px 100px;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+    .mywork-title{
+      position: relative;
+      padding-left: 25%;
     }
     .mywork-title h1{
-        padding: 0;
-        font-size: 50px;
-        font-weight: 600;
+      padding: 0px 30px;
+      font-size: 80px;
+      font-weight: 600;
     }
     .mywork-title img{
-        width: 130px;
-        margin-right: -20px;
+      position: absolute;
+      bottom: 0;
+      right: 30%;
+      z-index: -1;
     }
+
+    /* Grid of project cards */
     .mywork-container{
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      margin-top: 10px;
     }
-    .mywork-container img{
-        width: 100%;
-        height: 100%;
+
+    /* Card (uses the same feel as services-format) */
+    .work-card{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+      padding: 24px;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      transition: 0.35s;
+      cursor: pointer;
     }
+    .work-card:hover{
+      transform: scale(1.03);
+      border-color: #ff00ff;
+      box-shadow: 0 12px 30px rgba(2,6,23,0.25);
+    }
+
+    .work-card-header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .work-name{
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0;
+      background: linear-gradient(270deg, #DF8908 50%, #B415FF 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Status chips */
+    .status{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      text-transform: capitalize;
+      white-space: nowrap;
+    }
+    .status.completed{ background: #e6f9ed; color: #0f7a3a; }
+    .status.in-progress{ background: #fff4d9; color: #8a5c00; }
+    .status.planned{ background: #eaf2ff; color: #133e7c; }
+
+    /* Body text inside card */
+    .work-short{
+      color: #d4d4d4;
+      font-size: 18px;
+      line-height: 28px;
+      max-width: 100%;
+    }
+
+    .meta{
+      color: #bdbdbd;
+      font-size: 14px;
+    }
+
+    .tech-list{
+      color: #d4d4d4;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    /* Links and read more style */
+    .links{
+      display: flex;
+      gap: 14px;
+      margin-top: 6px;
+      align-items: center;
+    }
+    .links a{
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .links a:hover{ text-decoration: underline; }
+
+    /* Modal: use same dark modal style as services */
+    .mywork-modal{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .modal-content{
+      background: #1a1a1a;
+      padding: 32px;
+      border-radius: 12px;
+      width: 600px;
+      max-width: 92%;
+      text-align: left;
+      border: 2px solid #ff00ff;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    }
+
+    .modal-content h2{
+      font-size: 28px;
+      margin-bottom: 12px;
+      background: linear-gradient(270deg, #DF8908 50%, #B415FF 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .modal-content p{
+      color: #e0e0e0;
+      font-size: 16px;
+      line-height: 26px;
+      margin: 8px 0;
+    }
+
+    .modal-close{
+      display: inline-block;
+      margin-top: 14px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 700;
+      position: relative;
+      left: 0;
+    }
+
+    /* Show more area */
     .mywork-showmore{
-        padding: 20px 40px;
-        font-size: 18px;
-        margin: 50px auto;
-        cursor: pointer;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin-top: 18px;
+      cursor: pointer;
     }
-}.mywork {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
-}
 
-.mywork-title {
-    position: relative;
-}
-.mywork-title h1 {
-    padding: 0px 30px;
-    font-size: 80px;
-    font-weight: 600;
-}
-.mywork-title img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-}
-
-.mywork-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-}
-.mywork-container img {
-    box-sizing: border-box;
-    width: 419px;
-    height: 280px;
-    transition: 0.3s ease;
-    cursor: pointer;
-    border-radius: 10px;
-    object-fit: cover;
-}
-.mywork-container img:hover {
-    transform: scale(1.05);
-    border: 4px solid #ff00ff;
-    border-radius: 12px;
-    transition: 0.3s ease;
-}
-
-.mywork-showmore {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border-radius: 50px;
-    border: 2px solid white;
-    padding: 30px 60px;
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 80px;
-    transition: 0.6s;
-    cursor: pointer;
-}
-.mywork-showmore:hover {
-    gap: 30px;
-    transition: 0.6s;
-}
-
-/* ---------- MODAL STYLES ---------- */
-.mywork-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.75);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    animation: fadeIn 0.3s ease;
-}
-.modal-content {
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 650px;
-    width: 90%;
-    text-align: left;
-    color: #333;
-    position: relative;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    animation: slideUp 0.3s ease;
-}
-.modal-content h2 {
-    margin-bottom: 15px;
-    font-size: 28px;
-    font-weight: 600;
-    color: #111;
-}
-.modal-content p {
-    margin: 8px 0;
-    font-size: 16px;
-    line-height: 1.5;
-}
-.modal-content a {
-    color: #ff00ff;
-    text-decoration: none;
-    margin-right: 10px;
-    font-weight: 500;
-}
-.modal-content a:hover {
-    text-decoration: underline;
-}
-.modal-content button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    background: #ff00ff;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-.modal-content button:hover {
-    background: #cc00cc;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-@keyframes slideUp {
-    from { transform: translateY(40px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px) {
-    .mywork-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
-    .mywork-container img {
-        width: 100%;
-        height: auto;
+    @keyframes popUp {
+      from {transform: scale(0.96);} 
+      to {transform: scale(1);} 
     }
-}
-@media (max-width: 768px) {
-    .mywork {
-        gap: 50px;
-        margin: 50px 100px;
+
+    /* ---------- RESPONSIVE ---------- */
+    @media(max-width:768px){
+      .mywork{
         align-items: start;
-    }
-    .mywork-title h1 {
+        gap: 70px;
+        margin: 20px 0px;
+      }
+      .mywork-title h1{
         padding: 0;
         font-size: 50px;
-        font-weight: 600;
-    }
-    .mywork-title img {
+        margin-left: 40px;
+      }
+      .mywork-title img{
         width: 130px;
         margin-right: -20px;
-    }
-    .mywork-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        }
-    .mywork-showmore {
-        padding: 20px 40px;
-        font-size: 18px;
-        margin: 50px auto;
-        cursor: pointer;
-    }
-    .modal-content {
+      }
+      .mywork-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      .work-card{
         padding: 20px;
-        font-size: 14px;
+      }
+      .work-short{
+        font-size: 18px;
+        line-height: 28px;
+      }
+      .modal-content{
+        padding: 28px;
+      }
     }
-    .modal-content h2 {
-        font-size: 22px;
+
+    @media(max-width:600px){
+      .mywork-container{
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .mywork{
+        margin: 20px 12px;
+        gap: 40px;
+      }
+      .mywork-title h1{
+        font-size: 36px;
+        padding: 0 12px;
+        margin-left: 0;
+      }
+      .work-card{
+        padding: 18px;
+        border-radius: 8px;
+      }
+      .work-short{ font-size: 16px; }
+      .modal-content{ padding: 18px; border-radius: 10px; }
     }
 }

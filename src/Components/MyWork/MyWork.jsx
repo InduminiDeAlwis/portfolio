@@ -14,22 +14,39 @@ const MyWork = () => {
             <img src={theme_pattern} alt= "" />
         </div>
 
-        {/* Project Images */}
+        {/* Project Details Cards */}
         <div className="mywork-container">
             {mywork_data.map((work,index)=>(
-                <img 
+                <div 
                     key={index} 
-                    src={work.w_img} 
-                    alt={work.w_name} 
-                    onClick={() => setSelectedWork(work)} 
-                />
+                    className="work-card"
+                    onClick={() => setSelectedWork(work)}
+                >
+                    <div className="work-card-header">
+                      <h3 className="work-name">{work.w_name}</h3>
+                      <span className={`status ${work.status.toLowerCase().replace(/\s+/g,'-')}`}>{work.status}</span>
+                    </div>
+
+                    <p className="work-short">{work.description}</p>
+
+                    <p className="meta">
+                      <strong>Category:</strong> {work.category} • <strong>Date:</strong> {work.date}
+                    </p>
+
+                    <p className="tech-list">{work.technologies.join(', ')}</p>
+
+                    <div className="links">
+                      {work.github && <a href={work.github} target="_blank" rel="noopener noreferrer">GitHub</a>}
+                      {work.live && <a href={work.live} target="_blank" rel="noopener noreferrer">Live</a>}
+                    </div>
+                </div>
             ))}
         </div>
 
         {/* Modal / Popup for details */}
         {selectedWork && (
-          <div className="mywork-modal">
-              <div className="modal-content">
+          <div className="mywork-modal" onClick={() => setSelectedWork(null)}>
+              <div className="modal-content" onClick={e => e.stopPropagation()}>
                   <h2>{selectedWork.w_name}</h2>
                   <p><b>Description:</b> {selectedWork.description}</p>
                   <p><b>Technologies:</b> {selectedWork.technologies.join(", ")}</p>
@@ -37,10 +54,9 @@ const MyWork = () => {
                   <p><b>Date:</b> {selectedWork.date}</p>
                   <p><b>Status:</b> {selectedWork.status}</p>
                   <p>
-                    <a href={selectedWork.github} target="_blank" rel="noopener noreferrer">GitHub</a> | 
-                    <a href={selectedWork.live} target="_blank" rel="noopener noreferrer"> Live Demo</a>
+                    {selectedWork.github && <a href={selectedWork.github} target="_blank" rel="noopener noreferrer">GitHub</a>} {selectedWork.live && <> | <a href={selectedWork.live} target="_blank" rel="noopener noreferrer"> Live Demo</a></>}
                   </p>
-                  <button onClick={() => setSelectedWork(null)}>Close</button>
+                  <button className="modal-close" onClick={() => setSelectedWork(null)}>Close</button>
               </div>
           </div>
         )}
