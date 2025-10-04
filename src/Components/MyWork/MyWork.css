@@ -1,39 +1,35 @@
 .mywork{
-    display : flex;
-    flex-direction : column;
-    /* MyWork styles updated to match Services visual language */
-    .mywork{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 80px;
-      margin: 80px 100px;
-      max-width: 1200px;
-      padding: 0 20px;
-    }
-    .mywork-title{
-      position: relative;
-      padding-left: 25%;
-    }
-    .mywork-title h1{
-      padding: 0px 30px;
-      font-size: 80px;
-      font-weight: 600;
-    }
-    .mywork-title img{
-      position: absolute;
-      bottom: 0;
-      right: 30%;
-      z-index: -1;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  margin: 60px auto;
+  max-width: 980px; /* reduced width */
+  padding: 0 20px;
+}
+.mywork-title{
+  position: relative;
+}
+.mywork-title h1{
+  padding: 0px 30px;
+  font-size: 80px;
+  font-weight: 600;
+}
+.mywork-title img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
 
     /* Grid of project cards */
     .mywork-container{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 40px;
       margin-top: 10px;
+      width: 100%;
     }
 
     /* Card (uses the same feel as services-format) */
@@ -128,12 +124,46 @@
       margin-top: 6px;
       align-items: center;
     }
-    .links a{
-      color: #ffcc00;
+    /* Link tiles */
+    .link-tile{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 12px;
+      color: #fff;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 13px;
+      box-shadow: 0 8px 24px rgba(2,6,23,0.18);
+      transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+      position: relative;
+      overflow: hidden;
     }
-    .links a:hover{ text-decoration: underline; }
+    .link-tile .link-icon{ display: inline-flex; width: 18px; height: 18px; align-items: center; justify-content: center; }
+    .link-tile .link-icon svg{ width: 18px; height: 18px; }
+
+    .link-tile.github{ background: linear-gradient(90deg,#24292e,#3b3f44); }
+    .link-tile.live{ background: linear-gradient(90deg,#00b09b,#96c93d); }
+    .link-tile.figma{ background: linear-gradient(90deg,#ff7262,#a259ff); }
+
+    .link-tile:hover{ transform: translateY(-6px); box-shadow: 0 22px 48px rgba(2,6,23,0.28); }
+
+    /* shine */
+    .link-tile::before{
+      content: '';
+      position: absolute;
+      left: -75%;
+      top: -25%;
+      width: 60%;
+      height: 150%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.15), rgba(255,255,255,0.35), rgba(255,255,255,0.06));
+      transform: rotate(-20deg) translateX(-100%);
+      opacity: 0;
+      transition: transform .9s cubic-bezier(.2,.9,.2,1), opacity .4s ease;
+      pointer-events: none;
+    }
+    .link-tile:hover::before{ transform: rotate(-20deg) translateX(30%); opacity: 1; }
 
     /* Modal: use same dark modal style as services */
     .mywork-modal{
@@ -227,7 +257,7 @@
         margin-right: -20px;
       }
       .mywork-container{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 30px;
       }
       .work-card{
@@ -262,5 +292,4 @@
       }
       .work-short{ font-size: 16px; }
       .modal-content{ padding: 18px; border-radius: 10px; }
-    }
-}
+  }

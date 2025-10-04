@@ -25,9 +25,9 @@ const mywork_data = [
         description: "Real-time Sri Lankan Sign Language translator converting hand gestures into text and speech. Built custom dataset and optimized for low-latency cross-platform apps to improve accessibility.",
         roles: ["Front-end Developer"],
         technologies: ["Python (OpenCV, MediaPipe)", "TensorFlow/Keras", "Scikit-learn", "Flutter"],
-        github: "",
-        live: "",
-        figma: "",
+    github: "https://github.com/InduminiDeAlwis/wavewords",
+    live: "",
+    figma: "",
         status: "Completed"
     },
     {
@@ -37,9 +37,9 @@ const mywork_data = [
         description: "Personal portfolio website with a modern, responsive UI inspired by Figma designs. Showcases projects, skills and integrates Web3Forms for secure form handling.",
         roles: ["Front-end Developer"],
         technologies: ["React.js (Vite)", "Tailwind CSS"],
-        github: "",
-        live: "",
-        figma: "",
+    github: "https://github.com/InduminiDeAlwis/portfolio",
+    live: "https://indumini-portfolio.example.com",
+    figma: "https://www.figma.com/file/your-portfolio-figma-link",
         status: "Completed"
     },
     {
@@ -49,9 +49,9 @@ const mywork_data = [
         description: "A UI/UX design project for a juice shop featuring 3D carousel sliders and responsive layouts, created in Figma with advanced prototyping.",
         roles: ["UI/UX Designer"],
         technologies: ["Figma", "3D Carousel", "Auto Layout", "Prototyping"],
-        github: "",
-        live: "",
-        figma: "",
+    github: "",
+    live: "",
+    figma: "https://www.figma.com/file/your-fruity-figma-link",
         status: "Completed"
     },
     {
@@ -61,9 +61,9 @@ const mywork_data = [
         description: "Browser-based puzzle game focused on code-breaking and logic challenges with a responsive, sleek UI.",
         roles: ["UI Designer", "Game Developer"],
         technologies: ["HTML", "CSS", "Bootstrap", "JavaScript"],
-        github: "",
-        live: "",
-        figma: "",
+    github: "https://github.com/InduminiDeAlwis/crack-the-code",
+    live: "",
+    figma: "",
         status: "Completed"
     },
     {
@@ -73,9 +73,9 @@ const mywork_data = [
         description: "Responsive landing page design prototype for a coffee shop focused on product showcasing, brand identity and clear CTAs, designed in Figma.",
         roles: ["UI/UX Designer"],
         technologies: ["Figma", "Responsive Design"],
-        github: "",
-        live: "",
-        figma: "",
+    github: "",
+    live: "",
+    figma: "https://www.figma.com/file/your-coffee-figma-link",
         status: "Completed"
     },
     {
@@ -85,10 +85,22 @@ const mywork_data = [
         description: "Developing a mobile app for a tea center where visitors can browse, explore, and purchase a variety of teas. The app emphasizes a clean and intuitive UI/UX design, smooth navigation, and real-time product updates. Firebase is used for authentication, database management, and image storage, enabling rapid development and seamless integration of features such as product catalog, cart, and checkout.",
         roles: ["Full-Stack Developer", "UI/UX Designer"],
         technologies: ["React Native", "Firebase (Auth, Firestore, Storage)", "Expo", "Figma"],
-        github: "",
+    github: "https://github.com/InduminiDeAlwis/evergreen-tea-app",
+    live: "",
+    figma: "https://www.figma.com/file/your-evergreen-figma-link",
+        status: "Ongoing"
+    },
+    {
+        w_no: 8,
+        w_name: "Real-Time Finger Counter",
+        w_img: "/project_10.png",
+        description: "A simple Python application that uses your webcam to count the number of raised fingers in real-time. Uses Mediapipe for robust hand landmark detection and OpenCV for video capture and display.",
+        roles: ["Computer Vision Developer"],
+        technologies: ["Python", "OpenCV", "Mediapipe"],
+        github: "https://github.com/InduminiDeAlwis/real-time-finger-counter",
         live: "",
         figma: "",
-        status: "Ongoing"
+        status: "Completed"
     },
     /*{
         w_no: 4,
