@@ -23,7 +23,7 @@ const App = () => {
       <AnimatedBackground />
       <PointerGlow />
       <Navbar />
-      <Hero />
+  <Hero />
       <About />
       <Services />
       <MyWork />

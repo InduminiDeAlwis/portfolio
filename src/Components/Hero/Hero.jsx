@@ -94,10 +94,20 @@ const Hero = () => {
                    Connect With Me
                  </AnchorLink>
                </div>
-               <div className="hero-resumes">
-                 <button className="hero-resume" onClick={() => openLink(seCvLink)} type="button">SE CV</button>
-                 <button className="hero-resume secondary" onClick={() => openLink(uiuxCvLink)} type="button">UI/UX CV</button>
-               </div>
+    
+            </div>
+            {/* Find CV block inside hero */}
+            <div className="hero-cv">
+              <div className="hero-cv-inner">
+                <div className="hero-cv-copy">
+                  <h3>Find my CV</h3>
+                  <p className="hero-cv-note">Download the CV that matches the role you'd like to see.</p>
+                </div>
+                <div className="cv-actions">
+                  <button className="hero-resume" onClick={() => openLink(seCvLink)} type="button">SE CV</button>
+                  <button className="hero-resume secondary" onClick={() => openLink(uiuxCvLink)} type="button">UI / UX CV</button>
+                </div>
+              </div>
             </div>
         </div>
         <div className="hero-bg-shapes" aria-hidden="true">

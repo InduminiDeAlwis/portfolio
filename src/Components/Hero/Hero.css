@@ -55,39 +55,57 @@
 
 .hero-action{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 20px;
-    font-weight: 500;
+    flex-direction: row;
+    gap: 16px;
+    font-size: 18px;
+    font-weight: 600;
     margin-top: 0;
-    width: auto;
+    width: 100%;
 }
 
 .hero-connect{
-    padding: 20px 35px;
-    border-radius: 50px;
+    padding: 12px 22px;
+    border-radius: 999px;
     background: linear-gradient(264deg, #DF8908 -5.09%,#B415FF 106.28%);
     cursor: pointer;
     white-space: nowrap;
-    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
 }
+.hero-connect:hover,
+.hero-connect:focus{
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(180,21,255,0.12);
+    outline: none;
+}
+
+.hero-resumes{ display:flex; gap:12px; align-items:center; margin-left: auto }
 
 
 .hero-resumes{ display:flex; gap:12px; align-items:center; }
 
 .hero-resume{
-    padding: 14px 30px;
-    border-radius: 40px;
+    padding: 10px 20px;
+    border-radius: 999px;
     border: 0;
     cursor: pointer;
     white-space: nowrap;
-    align-self: flex-start;
     background: linear-gradient(264deg, #DF8908 -5.09%,#B415FF 106.28%);
     color: #fff;
-    box-shadow: 0 10px 28px rgba(180,21,255,0.12);
+    box-shadow: 0 8px 22px rgba(180,21,255,0.10);
     font-weight: 700;
+    transition: transform 140ms ease, box-shadow 140ms ease, filter 140ms ease;
+}
+
+.hero-resume:hover,
+.hero-resume:focus{
+    transform: translateY(-2px);
+    box-shadow: 0 18px 48px rgba(180,21,255,0.14);
+    outline: none;
 }
 
 .hero-resume.secondary{
@@ -128,6 +146,19 @@
 
 .hero-role.hidden { opacity: 0; transform: translateY(6px); }
 .hero-role.visible { opacity: 1; transform: translateY(0); }
+
+/* Hero CV block (inline with hero content) */
+.hero-cv{ width:100%; margin-top: 18px }
+.hero-cv-inner{ display:flex; align-items:center; gap:20px; justify-content:space-between }
+.hero-cv-copy h3{ margin:0; font-size:20px }
+.hero-cv-note{ margin:4px 0 0; color: rgba(255,255,255,0.75); font-size:14px }
+.cv-actions{ display:flex; gap:12px }
+
+@media(max-width:880px){
+    .hero-cv-inner{ flex-direction:column; align-items:center; gap:10px }
+    .cv-actions{ width:100%; justify-content:center }
+    .cv-actions .hero-resume{ width:45% }
+}
 
 /* Floating background shapes */
 .hero-bg-shapes {
@@ -183,8 +214,10 @@
 }
 
 @media (max-width: 880px) {
-    .hero-container { flex-direction: column-reverse; padding: 48px 16px; }
-    .hero-image { width: 280px; height: 280px; }
+    .hero-action{ flex-direction: column; align-items: flex-start; gap: 12px }
+    .hero-resumes{ margin-left: 0 }
+    .hero-connect, .hero-resume{ width: 100%; justify-content: center }
+    .hero-image { width: 260px; height: 260px; }
 }
 
 .hero-connect:hover{
