@@ -31,7 +31,7 @@ const MyWork = () => {
 
                     <p className="meta">
                       {work.roles && (
-                        <><strong>Role:</strong> {work.roles[0]}</>
+                        <><strong>Roles:</strong> {work.roles.join(', ')}</>
                       )}
                     </p>
 

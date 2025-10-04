@@ -12,10 +12,10 @@ const mywork_data = [
         w_img: "/project_2.png",
         description: "Developed a Healthcare Care Plan Manager that digitizes patient intake, care planning, and progress monitoring to streamline workflows and support data-driven decisions.",
         roles: ["Full-Stack Developer", "Mobile App Developer", "UI/UX Designer"],
-        technologies: ["React Native", "Node.js (Serverless)", "Firebase / MongoDB"],
-        github: "https://github.com/AymanTechGlobal/atg-healthcare-careplan-manager.git",
-        live: "https://atg-mobile.vercel.app/",
-        figma: "",
+    technologies: ["Figma", "React Native", "Node.js (Serverless)", "Firebase / MongoDB (NoSQL)", "GitHub"],
+    github: "https://github.com/AymanTechGlobal/atg-healthcare-careplan-manager.git",
+    live: "https://atg-mobile.vercel.app/",
+    figma: "https://www.figma.com/file/your-atg-figma-link",
         status: "Completed"
     },
     {
@@ -95,7 +95,7 @@ const mywork_data = [
         w_name: "Real-Time Finger Counter",
         w_img: "/project_10.png",
         description: "A simple Python application that uses a webcam to count the number of raised fingers in real-time. Uses MediaPipe for robust hand landmark detection and OpenCV for video capture and display.",
-        roles: ["Developer"],
+    roles: ["Computer Vision Developer", "ML Engineer"],
         technologies: ["Python", "OpenCV", "Mediapipe"],
         github: "https://github.com/InduminiDeAlwis/real-time-finger-counter",
         live: "",
