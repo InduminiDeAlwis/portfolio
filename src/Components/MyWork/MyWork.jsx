@@ -30,14 +30,21 @@ const MyWork = () => {
                     <p className="work-short">{work.description}</p>
 
                     <p className="meta">
-                      <strong>Category:</strong> {work.category} • <strong>Date:</strong> {work.date}
+                      {work.roles && (
+                        <><strong>Role:</strong> {work.roles[0]}</>
+                      )}
                     </p>
 
-                    <p className="tech-list">{work.technologies.join(', ')}</p>
+                    <div className="tech-list">
+                      {work.technologies.map((tech, i) => (
+                        <span className="tech-chip" key={i}>{tech}</span>
+                      ))}
+                    </div>
 
                     <div className="links">
                       {work.github && <a href={work.github} target="_blank" rel="noopener noreferrer">GitHub</a>}
                       {work.live && <a href={work.live} target="_blank" rel="noopener noreferrer">Live</a>}
+                      {work.figma && <a href={work.figma} target="_blank" rel="noopener noreferrer">Figma</a>}
                     </div>
                 </div>
             ))}
@@ -49,22 +56,18 @@ const MyWork = () => {
               <div className="modal-content" onClick={e => e.stopPropagation()}>
                   <h2>{selectedWork.w_name}</h2>
                   <p><b>Description:</b> {selectedWork.description}</p>
-                  <p><b>Technologies:</b> {selectedWork.technologies.join(", ")}</p>
-                  <p><b>Category:</b> {selectedWork.category}</p>
-                  <p><b>Date:</b> {selectedWork.date}</p>
+                  <p><b>Roles:</b> {selectedWork.roles ? selectedWork.roles.join(', ') : '-'}</p>
+                  <p><b>Technologies:</b> {selectedWork.technologies.join(', ')}</p>
                   <p><b>Status:</b> {selectedWork.status}</p>
                   <p>
-                    {selectedWork.github && <a href={selectedWork.github} target="_blank" rel="noopener noreferrer">GitHub</a>} {selectedWork.live && <> | <a href={selectedWork.live} target="_blank" rel="noopener noreferrer"> Live Demo</a></>}
+                    {selectedWork.github && <a href={selectedWork.github} target="_blank" rel="noopener noreferrer">GitHub</a>}
+                    {selectedWork.live && <> {selectedWork.github ? ' | ' : ''}<a href={selectedWork.live} target="_blank" rel="noopener noreferrer">Live Demo</a></>}
+                    {selectedWork.figma && <> {(selectedWork.github || selectedWork.live) ? ' | ' : ''}<a href={selectedWork.figma} target="_blank" rel="noopener noreferrer">Figma</a></>}
                   </p>
                   <button className="modal-close" onClick={() => setSelectedWork(null)}>Close</button>
               </div>
           </div>
         )}
-
-        <div className="mywork-showmore">
-            <p>Show More</p>
-            <img src={arrow_icon} alt="" />
-        </div>
     </div>
   )
 }
