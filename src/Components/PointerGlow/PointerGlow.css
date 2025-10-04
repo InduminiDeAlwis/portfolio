@@ -1,0 +1,19 @@
+.pointer-glow{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms ease, background 220ms ease;
+  opacity: 0;
+  z-index: 9999;
+}
+
+/* slightly smaller on mobile */
+@media (max-width: 720px){
+  .pointer-glow{ width: 120px; height: 120px }
+}

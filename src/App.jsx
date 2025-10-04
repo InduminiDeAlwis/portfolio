@@ -8,6 +8,7 @@ import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer/Footer';
 import AnimatedBackground from './Components/AnimatedBackground/AnimatedBackground';
 import ThemeToggle from './Components/ThemeToggle/ThemeToggle';
+import PointerGlow from './Components/PointerGlow/PointerGlow';
 
 const App = () => {
   const [theme, setTheme] = useState('dark'); // default theme is dark
@@ -20,6 +21,7 @@ const App = () => {
   return (
     <div>
       <AnimatedBackground />
+      <PointerGlow />
       <Navbar />
       <Hero />
       <About />

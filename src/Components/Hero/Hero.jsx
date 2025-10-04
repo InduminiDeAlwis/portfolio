@@ -67,8 +67,9 @@ const Hero = () => {
   };
   const handleTouchEnd = () => setImgStyle({transform: 'none'});
 
+
   return (
-    <div id='home' className = "hero">
+  <div id='home' className = "hero">
         <div
           className={`hero-image ${imgStyle.transform !== 'none' ? 'tilt-active' : ''}`}
           ref={imgRef}
