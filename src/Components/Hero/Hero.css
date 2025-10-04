@@ -120,9 +120,14 @@
 }
 .hero-role {
     font-size: 18px;
-    color: rgba(15,23,42,0.85);
+    color: #B415FF; /* accent color to match title gradient */
+    font-weight: 600;
+    line-height: 1.2;
     transition: opacity 400ms ease, transform 400ms ease;
 }
+
+.hero-role.hidden { opacity: 0; transform: translateY(6px); }
+.hero-role.visible { opacity: 1; transform: translateY(0); }
 
 /* Floating background shapes */
 .hero-bg-shapes {
