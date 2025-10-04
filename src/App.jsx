@@ -2,21 +2,17 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
 import About from './Components/About/About';
+import Timeline from './Components/Timeline/Timeline';
 import Services from './Components/Services/Services';
 import MyWork from './Components/MyWork/MyWork';
 import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer/Footer';
 import AnimatedBackground from './Components/AnimatedBackground/AnimatedBackground';
-import ThemeToggle from './Components/ThemeToggle/ThemeToggle';
+// ThemeToggle removed - site uses a single theme
 import PointerGlow from './Components/PointerGlow/PointerGlow';
 
 const App = () => {
-  const [theme, setTheme] = useState('dark'); // default theme is dark
-
-  // Apply theme to body using data-theme attribute
-  useEffect(() => {
-    document.body.setAttribute('data-theme', theme);
-  }, [theme]);
+  // Single theme (dark) — theme switching removed
 
   return (
     <div>
@@ -25,11 +21,11 @@ const App = () => {
       <Navbar />
   <Hero />
       <About />
+  <Timeline />
       <Services />
       <MyWork />
       <Contact />
-      <Footer />
-      <ThemeToggle theme={theme} setTheme={setTheme} />
+  <Footer />
     </div>
   );
 };

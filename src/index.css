@@ -11,30 +11,15 @@ body {
   font-family: 'Outfit', sans-serif;
   opacity: 0;
   animation: fadeIn 1.5s forwards;
-  transition: background 0.3s, color 0.3s; /* smooth theme transition */
-}
-
-/* Dark theme */
-body[data-theme='dark'] {
   background: #161513;
-  color: white; /* text is white in dark mode */
+  color: white;
+  transition: none;
 }
 
-/* Light theme */
-body[data-theme='light'] {
-  background: #f0f0f0;
-  color: #000000; /* text is black in light mode */
-}
 
 /* Make all text inherit theme color */
 h1, h2, h3, h4, h5, h6, p, a, span, li, label, button {
   color: inherit;
-}
-
-/* Optional: buttons/links look good in light mode */
-body[data-theme='light'] button,
-body[data-theme='light'] a {
-  color: #000000;
 }
 
 /* Fade-in animation */
