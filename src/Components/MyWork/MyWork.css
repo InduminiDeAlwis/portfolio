@@ -32,17 +32,18 @@
       width: 100%;
     }
 
-    /* Card (uses the same feel as services-format) */
+    /* Card (consistent spacing + bottom-aligned links) */
     .work-card{
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 12px;
-      padding: 24px;
-      border-radius: 10px;
+      justify-content: flex-start;
+      gap: 14px;
+      padding: 20px;
+      min-height: 260px;
+      border-radius: 12px;
       border: 2px solid transparent;
       background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      transition: 0.35s;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
       cursor: pointer;
     }
     .work-card:hover{
@@ -56,6 +57,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
+      margin-bottom: 6px;
     }
 
     .work-name{
@@ -83,21 +85,23 @@
     /* Body text inside card */
     .work-short{
       color: #d4d4d4;
-      font-size: 18px;
-      line-height: 28px;
-      max-width: 100%;
+      font-size: 15px;
+      line-height: 22px;
+      margin: 0 0 6px 0;
+      flex: 0 0 auto;
     }
 
     .meta{
       color: #bdbdbd;
-      font-size: 14px;
+      font-size: 13px;
+      margin: 0 0 6px 0;
     }
 
     .tech-list{
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 6px;
+      margin: 6px 0 10px 0;
     }
 
 .tech-chip{
@@ -120,8 +124,8 @@
     /* Links and read more style */
     .links{
       display: flex;
-      gap: 14px;
-      margin-top: 6px;
+      gap: 12px;
+      margin-top: auto; /* push links to card bottom */
       align-items: center;
     }
     /* Link tiles */
@@ -135,17 +139,19 @@
       text-decoration: none;
       font-weight: 700;
       font-size: 13px;
-      box-shadow: 0 8px 24px rgba(2,6,23,0.18);
+      box-shadow: 0 8px 24px rgba(2,6,23,0.12);
       transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
       position: relative;
       overflow: hidden;
+      min-width: 72px;
+      justify-content: center;
     }
     .link-tile .link-icon{ display: inline-flex; width: 18px; height: 18px; align-items: center; justify-content: center; }
     .link-tile .link-icon svg{ width: 18px; height: 18px; }
 
-    .link-tile.github{ background: linear-gradient(90deg,#24292e,#3b3f44); }
-    .link-tile.live{ background: linear-gradient(90deg,#00b09b,#96c93d); }
-    .link-tile.figma{ background: linear-gradient(90deg,#ff7262,#a259ff); }
+  .link-tile.github{ background: linear-gradient(90deg,#24292e,#3b3f44); }
+  .link-tile.live{ background: linear-gradient(90deg,#00b09b,#96c93d); }
+  .link-tile.figma{ background: linear-gradient(90deg,#ff7262,#a259ff); }
 
     .link-tile:hover{ transform: translateY(-6px); box-shadow: 0 22px 48px rgba(2,6,23,0.28); }
 
