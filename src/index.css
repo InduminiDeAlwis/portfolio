@@ -6,14 +6,17 @@
 }
 
 /* Base body */
+html{ box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit }
+
 body {
-  height: 100vh;
+  min-height: 100vh; /* allow pages taller than viewport on mobile */
   font-family: 'Outfit', sans-serif;
   opacity: 0;
-  animation: fadeIn 1.5s forwards;
+  animation: fadeIn 1.2s ease forwards;
   background: #161513;
   color: white;
-  transition: none;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 
@@ -31,19 +34,22 @@ h1, h2, h3, h4, h5, h6, p, a, span, li, label, button {
 
 /* Global responsive helpers to normalize large side-margins and scale content on small screens */
 @media (max-width: 1200px) {
+  /* reduce large side gutters and center content */
   .navbar, .footer, .about, .contact, .services, .mywork, .timeline {
-    margin-left: 60px !important;
-    margin-right: 60px !important;
+    margin-left: 40px !important;
+    margin-right: 40px !important;
+    max-width: calc(100% - 80px);
   }
-  .navbar > img, .footer-top-left img { width: 220px !important; }
+  .navbar > img, .footer-top-left img { width: 220px !important; max-width: 40%; }
 }
 
 @media (max-width: 880px) {
   /* compact spacing for tablet / small laptop */
   .navbar, .footer, .about, .contact, .services, .mywork, .timeline {
-    margin: 20px !important;
+    margin: 16px !important;
     padding-left: 12px !important;
     padding-right: 12px !important;
+    max-width: calc(100% - 32px);
   }
   .mywork-title h1, .about-title h1, .services-title h1, .contact-title h1 {
     font-size: clamp(28px, 5vw, 50px) !important;
@@ -62,13 +68,20 @@ h1, h2, h3, h4, h5, h6, p, a, span, li, label, button {
   .navbar, .footer, .about, .contact, .services, .mywork, .timeline {
     margin: 12px !important;
     padding: 8px !important;
+    max-width: calc(100% - 24px);
   }
   .hero h1 { font-size: clamp(24px, 8vw, 40px) !important; }
   .hero p { font-size: 16px !important; line-height: 24px !important; }
-  .hero-image, .hero img, .about-left img { width: 180px !important; height: auto !important; }
+  .hero-image, .hero img, .about-left img { width: 100% !important; max-width: 260px; height: auto !important; }
   .mywork-title h1, .about-title h1, .services-title h1, .contact-title h1 { font-size: 32px !important; }
   .mywork-container, .services-container, .tl-wrap { grid-template-columns: 1fr !important; }
   .work-card { min-height: auto !important; padding: 14px !important; }
   .contact-right input, .contact-right textarea { width: 100% !important; }
   .footer-top-left img, .navbar > img { width: 140px !important; margin: 0 !important; }
 }
+
+/* Global image defaults: keep them contained so they don't crop unexpectedly */
+img { max-width: 100%; height: auto; display: block; }
+
+/* Utility: center main sections inside a capped container */
+.container-center { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
