@@ -5,6 +5,10 @@
     gap: 30px;
 }
 
+/* reveal when footer comes into view */
+.footer--visible{ animation: footerReveal 700ms ease both; }
+@keyframes footerReveal{ from{ transform: translateY(18px); opacity: 0 } to{ transform: translateY(0); opacity: 1 } }
+
 /* Top Section */
 .footer-top {
     display: flex;
@@ -38,6 +42,9 @@
     align-items: center;
     gap: 15px;
 }
+
+.footer-link{ cursor:pointer; color: #ddd; transition: transform 200ms ease, color 180ms ease }
+.footer-link:hover, .footer-link:focus{ transform: translateY(-3px); color: #fff; outline: none }
 
 /* Email Form */
 .footer-email-form {
@@ -81,11 +88,9 @@
     transform: scale(1.05);
 }
 
-.subscribe-message {
-    color: #df8908;
-    font-size: 16px;
-    margin-top: 5px;
-}
+.subscribe-message{ margin-top: 10px }
+.subscribe-message.success{ color: #8ef08e }
+.subscribe-message.error{ color: #ff7b7b }
 
 /* Subscription Popup */
 .subscribe-popup {
@@ -101,6 +106,43 @@
     z-index: 1000;
     opacity: 0;
     animation: popupSlide 0.5s forwards, popupFadeOut 0.5s 2.5s forwards;
+}
+
+/* back to top */
+.back-to-top{
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: linear-gradient(264deg, #DF8908 -5.09%,#B415FF 106.28%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1200;
+    box-shadow: 0 8px 24px rgba(180,20,255,0.12);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.back-to-top:hover{ transform: translateY(-4px) scale(1.03); box-shadow: 0 12px 30px rgba(180,20,255,0.18) }
+
+/* When footer is visible, lift the back-to-top button so it doesn't overlap footer content */
+.footer--visible .back-to-top{
+    bottom: 120px; /* push the button above the footer area */
+}
+
+/* smaller size/position on narrow screens */
+@media(max-width:480px){
+    .back-to-top{
+        right: 12px;
+        bottom: 12px;
+        width:40px;
+        height:40px;
+        font-size: 18px;
+    }
+    .footer--visible .back-to-top{ bottom: 160px }
 }
 
 @keyframes popupSlide {

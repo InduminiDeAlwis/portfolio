@@ -220,6 +220,15 @@
     .hero-image { width: 260px; height: 260px; }
 }
 
+/* Ensure the hero image is fully visible on narrow screens */
+@media (max-width: 480px) {
+    .hero-image { width: 220px; height: 220px; }
+    .hero-image img { object-fit: contain; }
+    .hero { margin-left: 0; padding: 12px; }
+    .hero img{ margin-top: 0; }
+    .hero h1{ font-size: 36px; }
+}
+
 .hero-connect:hover{
     border: 2px solid #FFF;
 }
