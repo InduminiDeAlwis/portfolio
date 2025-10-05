@@ -6,15 +6,41 @@
 .tl-wrap{ display:flex; flex-direction:column; gap:18px }
 .tl-item{ display:flex; gap:16px; align-items:flex-start; outline:none }
 .tl-marker{ width:28px; flex:0 0 28px; display:flex; align-items:center; justify-content:center }
-.tl-marker span{ display:inline-block; width:12px; height:12px; border-radius:50%; background:linear-gradient(180deg,#B415FF,#DF8908); box-shadow:0 8px 22px rgba(180,21,255,0.12) }
-.tl-card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:12px; transition: transform 260ms ease, box-shadow 260ms ease; cursor:pointer; width:100% }
+.tl-marker span{ display:inline-block; width:12px; height:12px; border-radius:50%; background:linear-gradient(180deg, rgba(180,21,255,0.9), rgba(223,137,8,0.85)); box-shadow:0 6px 14px rgba(180,21,255,0.08) }
+.tl-card{ background: linear-gradient(180deg, rgba(0,0,0,0.62), rgba(0,0,0,0.52)); padding:18px; border-radius:12px; transition: transform 260ms ease, box-shadow 260ms ease; cursor:pointer; width:100%; position:relative; z-index:0 }
+.tl-card::before{
+  /* darker, subtler animated gradient frame */
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 14px;
+  padding: 2px;
+  background: linear-gradient(90deg, #DF8908 0%, #B415FF 50%, #DF8908 100%);
+  background-size: 200% 200%;
+  z-index: -1;
+  filter: blur(6px);
+  opacity: 0.6;
+  transition: opacity 240ms ease, transform 240ms ease;
+  animation: gradientShift 6s linear infinite;
+}
 .tl-card .tl-head{ display:flex; align-items:center; justify-content:space-between; gap:12px }
 .tl-card h3{ margin:0; font-size:18px }
 .tl-sub{ color: rgba(255,255,255,0.75); font-weight:600 }
 .tl-body{ max-height:0; overflow:hidden; transition: max-height 320ms ease }
 .tl-footer{ margin-top:10px; color: rgba(255,255,255,0.6); font-size:13px }
-.tl-card.open{ transform: translateY(-6px); box-shadow: 0 20px 60px rgba(20,20,30,0.45) }
+.tl-card.open{ transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.6) }
 .tl-card.open .tl-body{ max-height:200px; margin-top:10px }
+
+/* subtle intensify on hover/focus */
+.tl-card:hover::before,
+.tl-card:focus::before,
+.tl-card.open::before{ filter: blur(6px); opacity:1; transform: scale(1.01) }
+
+@keyframes gradientShift{
+  0%{ background-position: 0% 50% }
+  50%{ background-position: 100% 50% }
+  100%{ background-position: 0% 50% }
+}
 
 /* reveal when entering viewport */
 .tl-item{ opacity:0; transform: translateY(10px); transition: opacity 420ms ease, transform 420ms ease }

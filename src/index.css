@@ -28,3 +28,47 @@ h1, h2, h3, h4, h5, h6, p, a, span, li, label, button {
     opacity: 1;
   }
 }
+
+/* Global responsive helpers to normalize large side-margins and scale content on small screens */
+@media (max-width: 1200px) {
+  .navbar, .footer, .about, .contact, .services, .mywork, .timeline {
+    margin-left: 60px !important;
+    margin-right: 60px !important;
+  }
+  .navbar > img, .footer-top-left img { width: 220px !important; }
+}
+
+@media (max-width: 880px) {
+  /* compact spacing for tablet / small laptop */
+  .navbar, .footer, .about, .contact, .services, .mywork, .timeline {
+    margin: 20px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  .mywork-title h1, .about-title h1, .services-title h1, .contact-title h1 {
+    font-size: clamp(28px, 5vw, 50px) !important;
+    padding: 0 !important;
+  }
+  .mywork-container { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .services-container { grid-template-columns: 1fr 1fr !important; }
+  .hero { margin-left: 0 !important; padding: 12px !important; }
+  .navbar > img { margin: 0 !important; width: 180px !important; }
+  .footer { margin: 30px 20px !important; }
+}
+
+@media (max-width: 480px) {
+  /* mobile-specific adjustments */
+  body { font-size: 15px; }
+  .navbar, .footer, .about, .contact, .services, .mywork, .timeline {
+    margin: 12px !important;
+    padding: 8px !important;
+  }
+  .hero h1 { font-size: clamp(24px, 8vw, 40px) !important; }
+  .hero p { font-size: 16px !important; line-height: 24px !important; }
+  .hero-image, .hero img, .about-left img { width: 180px !important; height: auto !important; }
+  .mywork-title h1, .about-title h1, .services-title h1, .contact-title h1 { font-size: 32px !important; }
+  .mywork-container, .services-container, .tl-wrap { grid-template-columns: 1fr !important; }
+  .work-card { min-height: auto !important; padding: 14px !important; }
+  .contact-right input, .contact-right textarea { width: 100% !important; }
+  .footer-top-left img, .navbar > img { width: 140px !important; margin: 0 !important; }
+}

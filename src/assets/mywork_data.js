@@ -25,7 +25,7 @@ const mywork_data = [
         description: "Real-time Sri Lankan Sign Language translator converting hand gestures into text and speech. Built custom dataset and optimized for low-latency cross-platform apps to improve accessibility.",
         roles: ["Front-end Developer"],
         technologies: ["Python (OpenCV, MediaPipe)", "TensorFlow/Keras", "Scikit-learn", "Flutter"],
-    github: "https://github.com/InduminiDeAlwis/wavewords",
+    github: "https://github.com/nethmalgunawardhana/Hacklite2.0_frontend.git",
     live: "https://wavewords.example.com",
     figma: "",
         status: "Completed"
@@ -37,9 +37,9 @@ const mywork_data = [
         description: "Personal portfolio website with a modern, responsive UI inspired by Figma designs. Showcases projects, skills and integrates Web3Forms for secure form handling.",
         roles: ["Front-end Developer"],
         technologies: ["React.js (Vite)", "Tailwind CSS"],
-    github: "https://github.com/InduminiDeAlwis/portfolio",
-    live: "https://indumini-portfolio.example.com",
-    figma: "https://www.figma.com/file/your-portfolio-figma-link",
+    github: "https://github.com/InduminiDeAlwis/portfolio.git",
+    live: "https://portfolio-sjvl.vercel.app/",
+    figma: "https://www.figma.com/design/iq2sQvhrXTyyNxU23Mzb3T/My-Portfolio?node-id=0-1&t=3jUSFaYGLHVq0cAy-1",
         status: "Completed"
     },
     {
@@ -51,7 +51,7 @@ const mywork_data = [
         technologies: ["Figma", "3D Carousel", "Auto Layout", "Prototyping"],
     github: "",
     live: "",
-    figma: "https://www.figma.com/file/your-fruity-figma-link",
+    figma: "https://www.figma.com/design/OyxM4mhUT4nlofKs0rJHrG/Fruity?node-id=0-1&t=17Dy3zmTQc6L39uE-1",
         status: "Completed"
     },
     {
@@ -75,7 +75,7 @@ const mywork_data = [
         technologies: ["Figma", "Responsive Design"],
     github: "",
     live: "",
-    figma: "https://www.figma.com/file/your-coffee-figma-link",
+    figma: "https://www.figma.com/design/rxHlIvKV8CZrqJ9g6Z5FMt/Coffee-Shop-Landing-Page-UI-Design?node-id=4-3&t=re1F0ysY6dY2CpuC-1",
         status: "Completed"
     },
     {
@@ -87,7 +87,7 @@ const mywork_data = [
         technologies: ["React Native", "Firebase (Auth, Firestore, Storage)", "Expo", "Figma"],
     github: "https://github.com/InduminiDeAlwis/evergreen-tea-app",
     live: "",
-    figma: "https://www.figma.com/file/your-evergreen-figma-link",
+    figma: "https://www.figma.com/design/Q97U3gzPUkV2WQbj15Al5z/Smooth-loading-animation?node-id=5-117&t=6od4Kx36V2zOQqb6-1",
         status: "Ongoing"
     },
     {
@@ -97,7 +97,7 @@ const mywork_data = [
         description: "A simple Python application that uses a webcam to count the number of raised fingers in real-time. Uses MediaPipe for robust hand landmark detection and OpenCV for video capture and display.",
     roles: ["Computer Vision Developer", "ML Engineer"],
         technologies: ["Python", "OpenCV", "Mediapipe"],
-        github: "https://github.com/InduminiDeAlwis/real-time-finger-counter",
+        github: "https://github.com/InduminiDeAlwis/Real-Time-Finger-Counter.git",
         live: "",
         figma: "",
         status: "Completed"
