@@ -86,12 +86,26 @@
     }     
     
     .nav-mob-open {
-        display: block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         position: relative;   /* inline with logo */
-        width: 28px;
-        height: 28px;
-        padding: 4px;
-        z-index: 100;
+        /* visible icon size */
+        max-width: 20px;
+        height: auto;
+        /* keep a comfortable touch area */
+        min-width: 44px;
+        min-height: 44px;
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        z-index: 110;
+    }
+    /* ensure the image inside the element is constrained */
+    .nav-mob-open[alt], .nav-mob-open[src] {
+        max-width: 20px;
+        height: auto;
+        display: block;
     }
     .nav-mob-close {
         display: block;
